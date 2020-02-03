@@ -19,6 +19,8 @@ def main():
         elif choice_option_user == "r":
             mod.input_search_plante = input("Nom de la plante a rechercher: ")
             mod.rechercher_action()
+        elif choice_option_user == "p":
+            mod.average_price()
         elif choice_option_user == "q":
             break
         else:
