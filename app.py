@@ -20,7 +20,10 @@ def main():
             mod.input_search_plante = input("Nom de la plante a rechercher: ")
             mod.rechercher_action()
         elif choice_option_user == "p":
+            mod.input_average_price = input("Nom de l'indication: ")
             mod.average_price()
+        elif choice_option_user == "i":
+            mod.plante_join_sub_class()
         elif choice_option_user == "q":
             break
         else:

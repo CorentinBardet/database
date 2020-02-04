@@ -14,3 +14,12 @@ val = (id, nom, indication, partie_utilisee, prix)
 cursor.execute(sql, val)
 conn.commit()
 conn.close()
+
+
+
+def fn_displayed_familly_identified():
+    displayed_familly_identified = Plantes.select(Familly.name, fn.COUNT(Plantes.name).alias("dis"))
+
+
+def fn_min_max_sub_class():
+    min_max_sub_class = Plantes.select(Sub_class.name, fn.MAX(Plantes.price).alias("max"), fn.MIN(Plantes.price).alias("max")).join(Familly).join(Sub_class)
